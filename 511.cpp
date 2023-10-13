@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int *reverse(int *list, int size)
+{
+	int *result=new int[size];
+	for(int i=0, j=size-1; i<size; i++,j--)
+	result[i]=list[j];
+	return result;
+}
+void printarr(int*list, int size)
+{
+	for(int i=0; i<size; i++)
+	{
+		cout<<list[i]<<endl;
+	}
+}
+int main ()
+{
+	int list[]={3,4,5,6,1,9};
+	int *p=reverse(list,6);
+	printarr(p,6);
+	
+	return 0;
+}
